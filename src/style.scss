@@ -45,6 +45,8 @@ $background500: #bab9b4;
 $background600: #827964;
 $accent: #907B76;
 
+$max-width: 800px;
+
 * {
   box-sizing: border-box;
 }
@@ -61,7 +63,7 @@ body {
 }
 
 .main {
-	max-width: 700px;
+	max-width: $max-width;
   margin: 0 auto;
 }
 
@@ -74,25 +76,24 @@ body {
 	justify-content: space-between;
 	white-space: pre;
 
-  @media (max-width: 700px) {
+  @media (max-width: $max-width) {
     font-size: 14vw;
   }
 }
 
-.content {
+.container {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
 
-	@media (max-width: 700px) {
+	@media (max-width: $max-width) {
     display: block;
   }
 }
 
 .intro {
+	margin-top: 20px;
 	color: gray;
-	flex: 0 0 65%;
-	padding-left: 8px;
 
 	.intro__title {
 		text-decoration: underline;
@@ -104,29 +105,35 @@ body {
 		font-size: 14px;
 	}
 	
-	@media (max-width: 700px) {
+	@media (max-width: $max-width) {
 		margin-bottom: 20px;
 		margin-right: 5px;
 		text-align: right;
   }
 }
 
-.vhr {
-	width: 1px;
-  height: 150px;
-  margin-left: 24px;
-	background-color: #979797;
-	
-	@media (max-width: 700px) {
-    width: 0;
-  }
+.content {
+	flex: 1 1 auto;
+	padding-left: 8px;
+}
+
+.sidebar {
+	flex: 1 0 220px;
+	border-left: 1px solid;
+	margin-left: 20px;
+
+	@media (max-width: $max-width) {
+		border: 0;
+		margin-left: 0;
+		margin-top: 20px;
+	}
 }
 
 .number {
-	flex: 0 0 35%;
 	position: relative;
   font-size: 218px;
 	color: $primary500;
+	height: 140px;
 	
 	p {
 		position: absolute;
@@ -140,7 +147,7 @@ body {
   width: 84px;
   height: 90px;
 	top: 45px;
-	left: 68px;
+	left: 42px;
 	fill: lightgray;
 	transition: .1s fill ease-in-out;
 
@@ -149,7 +156,7 @@ body {
 		cursor: pointer;
 	}
 	
-	@media (max-width: 700px) {
+	@media (max-width: $max-width) {
 		left: auto;
 		right: 93px;
 	}
@@ -187,12 +194,12 @@ body {
 }
 
 .quote {
-	margin-top: 40px;
-	font-size: 26px;
+	font-size: 18px;
 	text-align: right;
-	color: $primary500;
+	color: gray;
+	margin-bottom: 20px;
 }
 
 .emph {
-	color: #979da5;	
+	color: #d3d3d3;	
 }
