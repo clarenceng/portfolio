@@ -38,14 +38,9 @@ ol, ul {
 
 // Base Styles
 $primary500: #CACACA;
-$primary600: #9e97a5;
-$primary700: #1F1F1F;
-$background400: #656259;
-$background500: #bab9b4;
-$background600: #827964;
-$accent: #907B76;
+$background500: #465a53;
 
-$max-width: 800px;
+$max-width: 900px;
 
 * {
   box-sizing: border-box;
@@ -64,102 +59,28 @@ body {
 
 .main {
 	max-width: $max-width;
-  margin: 0 auto;
-}
-
-.header {
-	font-weight: 600;
-  font-size: 96px;
-  text-transform: uppercase;
-  color: #c0c78a;
+	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
-	white-space: pre;
-
-  @media (max-width: $max-width) {
-    font-size: 14vw;
-  }
 }
 
-.container {
+.section {
+	flex: 0 0 50%;
+	height: 100%;
+}
+
+.left {
 	display: flex;
-	justify-content: space-between;
-	position: relative;
-
-	@media (max-width: $max-width) {
-    display: block;
-  }
-}
-
-.intro {
-	margin-top: 20px;
-	color: gray;
-
-	.intro__title {
-		text-decoration: underline;
-		font-size: 28px;
-		margin-bottom: 5px;
+	align-items: flex-end;
+	background-color: #95a9b2;
+	background: linear-gradient(115deg, transparent 75%, rgba(0,0,0,.1) 50%), linear-gradient(245deg, transparent 75%, rgba(0,0,0,.25) 50%), linear-gradient(115deg, transparent 75%, rgba(0,0,0,.2) 50%) 15px -30px, linear-gradient(245deg, transparent 75%, #95a9b2 50%) 15px -30px, -webkit-gradient(linear, 40% 100%, 200% 100%, from(#fff), to(rgba(255, 255, 255, 0.5)));
+	background-size: 50px 75px;
+	img {
+		width: 100%;
 	}
-
-	.intro__text {
-		font-size: 14px;
-	}
-	
-	@media (max-width: $max-width) {
-		margin-bottom: 20px;
-		margin-right: 5px;
-		text-align: right;
-  }
 }
 
 .content {
-	flex: 1 1 auto;
-	padding-left: 8px;
-}
-
-.sidebar {
-	flex: 1 0 220px;
-	border-left: 1px solid;
-	margin-left: 20px;
-
-	@media (max-width: $max-width) {
-		border: 0;
-		margin-left: 0;
-		margin-top: 20px;
-	}
-}
-
-.number {
-	position: relative;
-  font-size: 218px;
-	color: $primary500;
-	height: 140px;
-	
-	p {
-		position: absolute;
-		right: -16px;
-		top: -83px;
-	}
-}
-
-.arrow {
-	position: absolute;
-  width: 84px;
-  height: 90px;
-	top: 45px;
-	left: 42px;
-	fill: lightgray;
-	transition: .1s fill ease-in-out;
-
-	&:hover {
-		fill: #fff;
-		cursor: pointer;
-	}
-	
-	@media (max-width: $max-width) {
-		left: auto;
-		right: 93px;
-	}
+	padding: 36px;
 }
 
 .links {
@@ -191,15 +112,4 @@ body {
 
 .icons {
 	max-width: 16px;
-}
-
-.quote {
-	font-size: 18px;
-	text-align: right;
-	color: gray;
-	margin-bottom: 20px;
-}
-
-.emph {
-	color: #d3d3d3;	
 }
