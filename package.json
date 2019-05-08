@@ -6,6 +6,7 @@
   "author": "Clarence",
   "license": "MIT",
   "dependencies": {
+    "animejs": "^3.0.1",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
