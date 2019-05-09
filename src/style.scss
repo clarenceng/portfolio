@@ -1,46 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-
-
-// Base Styles
-$primary500: #CACACA;
-$background500: #465a53;
-
-$max-width: 900px;
+$breakpoint: 600px;
 
 * {
   box-sizing: border-box;
@@ -53,63 +11,86 @@ body {
 	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: $primary500;
-	background: $background500;
 }
 
 .main {
-	max-width: $max-width;
+	max-width: 700px;
 	margin: 0 auto;
-	display: flex;
 }
 
-.section {
-	flex: 0 0 50%;
-	height: 100%;
-}
-
-.left {
+.header {
 	display: flex;
-	align-items: flex-end;
-	background-color: #95a9b2;
-	background: linear-gradient(115deg, transparent 75%, rgba(0,0,0,.1) 50%), linear-gradient(245deg, transparent 75%, rgba(0,0,0,.25) 50%), linear-gradient(115deg, transparent 75%, rgba(0,0,0,.2) 50%) 15px -30px, linear-gradient(245deg, transparent 75%, #95a9b2 50%) 15px -30px, -webkit-gradient(linear, 40% 100%, 200% 100%, from(#fff), to(rgba(255, 255, 255, 0.5)));
-	background-size: 50px 75px;
-	img {
-		width: 100%;
+	justify-content: space-between;
+	margin-bottom: 32px;
+
+	@media screen and (max-width: $breakpoint) {
+		display: block;
 	}
-}
-
-.content {
-	padding: 36px;
 }
 
 .links {
-	margin-top: 20px;
-	margin-right: 7px;
-	display: flex;
-	justify-content: flex-end;
-	color: gray;
-}
+	list-style: none;
 
-.row {
-	height: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-
-	svg {
-		display: block;
-    width: 100%;
-    height: auto;
-		fill: gray;
+	@media screen and (max-width: $breakpoint) {
+		padding: 0;
 	}
 }
 
-.text {
-	font-size: 13px;
-	margin-right: 20px;
+.links__item {
+	margin-bottom: 4px;
+
+	svg {
+		margin-right: 4px;
+	}
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
 }
 
-.icons {
-	max-width: 16px;
+.section {
+	padding: 16px 0;
+}
+
+.subtitle {
+	color: #7d7d7d;
+	font-size: 18px;
+}
+
+.skill {
+	margin-bottom: 8px;
+}
+
+.pill-list {
+	list-style: none;
+	display: flex;
+	padding: 0;
+
+	li {
+		background: #e8e8e8;
+		padding-left: 8px;
+		padding-right: 8px;
+		margin-left: 8px;
+		margin-right: 8px;
+		border-radius: 20px;
+	}
+}
+
+.exp-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.exp-header__date {
+	display: flex;
+	align-items: baseline;
+}
+
+.exp-header__length {
+	font-size: 12px;
+	margin-left: 8px;
+	color: #7d7d7d;
 }
