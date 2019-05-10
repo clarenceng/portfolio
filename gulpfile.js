@@ -16,7 +16,7 @@ function css() {
 
 function js() {
   return src([
-      'node_modules/animejs/lib/anime.min.js',
+      // 'node_modules/animejs/lib/anime.min.js',
       './src/*.js',
     ], { sourcemaps: true })
     .pipe(concat('js.min.js'))
