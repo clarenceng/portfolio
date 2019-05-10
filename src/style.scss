@@ -6,11 +6,34 @@ $breakpoint: 600px;
 
 body {
   font-size: 16px;
-  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
 	font-weight: 400;
-	line-height: 1.4;
+	line-height: 1.6;
+	letter-spacing: .7;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin: 0;
+}
+
+h1, h2, h3 {
+	font-weight: 500;
+	margin: 0;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-bottom: 12px;
+}
+
+h3 {
+	font-size: 20px;
 }
 
 .main {
@@ -37,7 +60,8 @@ body {
 }
 
 .links__item {
-	margin-bottom: 4px;
+	margin-bottom: 8px;
+	font-size: 14px;
 
 	svg {
 		margin-right: 4px;
@@ -52,15 +76,15 @@ body {
 
 .section {
 	padding: 16px 0;
+	margin-bottom: 24px;
 }
 
 .subtitle {
 	color: #7d7d7d;
-	font-size: 18px;
 }
 
 .skill {
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 .pill-list {
@@ -76,6 +100,10 @@ body {
 		margin-right: 8px;
 		border-radius: 20px;
 	}
+}
+
+.work-day {
+	margin-top: 42px;
 }
 
 .exp-header {
