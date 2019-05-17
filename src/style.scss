@@ -37,6 +37,12 @@ h3 {
 	font-size: 20px;
 }
 
+hr {
+	border: 0;
+	border-bottom: 1px solid #eaeaea;
+	max-width: 200px;
+}
+
 .main {
 	max-width: 700px;
 	margin: 0 auto;
@@ -49,6 +55,22 @@ h3 {
 
 	@media screen and (max-width: $breakpoint) {
 		display: block;
+	}
+}
+
+.menu {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	font-size: 14px;
+	padding-bottom: 16px;
+
+	.menu__item:not(:last-child) {
+		margin-right: 16px;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -76,8 +98,8 @@ h3 {
 }
 
 .section {
-	padding: 16px 0;
-	margin-bottom: 24px;
+	padding: 32px 0;
+	margin-bottom: 32px;
 }
 
 .subtitle {
@@ -110,6 +132,10 @@ h3 {
 
 .work-day {
 	margin-top: 42px;
+}
+
+.work-day__list {
+	margin-bottom: 0;
 }
 
 .exp {
